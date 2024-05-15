@@ -59,17 +59,6 @@
 
    <div class="container">
      <div class="section">
-       <h2>Comment Section</h2>
-        <p>You can do it! I belived in you! - Gasta</p>
-        <p>May all your dreams came true! - Armedilla</p>
-        <p>Wishing you all the best of luck, Ange - Kian</p>
-        <p>Live long and prosper! - Jai</p>
-		    <p>My Bestfriend lets go!! - Escuro</p>
-     </div>
-   </div>
-
-   <div class="container">
-     <div class="section">
        <h2>My Thoughts about F2F Class</h2>
         <p>I believe face-to-face classes are more real life experience
            because instructors can keep track of each student's progress 
@@ -77,33 +66,6 @@
            and understand the material when I'm in the classroom.
         </p>
      </div>
-   </div>
-
-   <div class="section">
-    <h2>Comment</h2>
-    <div class="form-container">
-      <form class="form">
-        <div class="form-group">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" 
-            required oninput="validateInput()"/>
-        </div>
-        <div class="form-group">
-          <label for="comment">Comment:</label>
-          <textarea
-            id="comment"
-            name="comment"
-            required
-            oninput="validateInput()">
-          </textarea>
-        </div>
-        <div class="form-group">
-          <button type="submit" id="submit_button" disabled>
-            Submit Comment
-          </button>
-        </div>
-      </form>
-    </div>
    </div>
 
     <div class="gallery">
@@ -172,6 +134,22 @@
         </form>
       </div>
     </div>
+
+    <div class="section">
+      <div class="comment-section">
+       <h2>Comments</h2>
+        <form id="comment-Form">
+           <textarea id="comment-Text" placeholder="Write your comment here..." required></textarea>
+           <button type="submit">Add Comment</button>
+        </form>
+        <div class="sort_buttons">
+           <button id="sort-Asc">Sort by Date (Asc)</button>
+           <button id="sort-Desc">Sort by Date (Desc)</button>
+        </div>
+        <ul id="comments-List"></ul>
+      </div>
+    </div> 
+
     <script src="script.js"></script>
   </body>
 </html>
