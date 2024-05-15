@@ -33,24 +33,14 @@ h2 {
   margin: 5rem;
 }
 
-.sec-1 {
-  flex: 1;
-  margin: 5px;
+.segment {
+  flex: 0;
+  margin: 10px;
   background-color: #f8c4b4;
   border-radius: 10px;
-  text-align: center;
+  text-align: auto;
   padding: 5px;
   box-shadow: 4px 5px 15px #e78895;
-}
-
-.sec-2 {
-  flex: 1;
-  margin: 5px;
-  background-color: #f3d0d7;
-  border-radius: 10px;
-  text-align: center;
-  padding: 5px;
-  box-shadow: 4px 5px 15px #ee99c2;
 }
 
 ul,
