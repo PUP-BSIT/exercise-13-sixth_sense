@@ -1,10 +1,15 @@
 function validateInput() {
-  let inputField = document.getElementById("comment");
-  let nameField = document.getElementById("name");
-  let submitBtn = document.getElementById("submit_btn");
-  if (inputField.value.trim().length > 0 && nameField.value.trim().length > 0) {
-    submitBtn.disabled = false;
-  } else {
-    submitBtn.disabled = true;
-  }
+const inputField = document.getElementById("comment");
+const nameField = document.getElementById("name");
+const submitBtn = document.getElementById("submit_btn");
+
+const isValid = (field) => field.value.trim().length > 0;
+
+const enableSubmit = isValid(inputField) && isValid(nameField);
+submitBtn.disabled = !enableSubmit;
+
+submitBtn.classList.toggle('enabled', enableSubmit);
 }
+
+document.getElementById("comment").addEventListener('input', validateInput);
+document.getElementById("name").addEventListener('input', validateInput);
