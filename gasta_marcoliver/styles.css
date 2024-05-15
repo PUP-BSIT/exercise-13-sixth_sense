@@ -160,16 +160,22 @@ textarea:focus {
 
 .submit-container input[type="submit"] {
   padding: 12px 24px;
-  background-color: #020041;
-  color: #fff;
+  background-color: #ccc;
+  color: #888;
   border: none;
   border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  cursor: not-allowed;
+  transition: background-color 0.3s ease, color 0.3s ease, cursor 0.3s ease;
 }
 
-.submit-container input[type="submit"]:hover {
-  background-color: green;
+.submit-container input[type="submit"]:not(.disabled) {
+  background-color: #020041;
+  color: #fff;
+  cursor: pointer;
+}
+
+.submit-container input[type="submit"]:not(.disabled):hover {
+  background-color: #020041;
 }
 
 @media screen and (min-width: 768px) {
@@ -194,4 +200,40 @@ textarea:focus {
   .image-container {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+.form-group button[type="submit"] {
+  background-color: #ccc;
+  color: #888;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: not-allowed;
+  transition: background-color 0.3s ease, color 0.3s ease, cursor 0.3s ease;
+}
+
+.form-group button[type="submit"]:not(.disabled) {
+  background-color: #020041;
+  color: #fff;
+  cursor: pointer;
 }
