@@ -5,7 +5,7 @@ function validateInput() {
   let nameField = document.getElementById("name");
   let submitBtn = document.getElementById("submit-btn");
 
-  if (!inputField.value.trim().length && !nameField.value.trim().length) {
+  if (inputField.value.trim().length && nameField.value.trim().length) {
     submitBtn.disabled = false;
   } else {
     submitBtn.disabled = true;
@@ -55,4 +55,3 @@ function sortComments(ascending) {
 
   renderComments();
 }
-
