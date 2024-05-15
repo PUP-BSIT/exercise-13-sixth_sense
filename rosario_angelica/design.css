@@ -218,7 +218,7 @@ textarea:focus {
   transition: background-color 0.3s ease, color 0.3s ease, cursor 0.3s ease;
 }
 
-.form-group button[type="submit"]:not(.disabled) {
+.form-group button[type="submit"] :not(.disabled) {
   background-color: #ff5e40;
   color: #fff;
   cursor: pointer;

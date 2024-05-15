@@ -3,10 +3,7 @@ function validate_input() {
   const comment_field = document.querySelector("#comment_input");
   const submit_btn = document.querySelector("#submit_btn");
 
-  if (
-    input_field.value.trim().length === 0 ||
-    comment_field.value.trim().length === 0
-  ) {
+  if (!input_field.value.trim() || !comment_field.value.trim()) {
     submit_btn.disabled = true;
     submit_btn.classList.add("disabled");
     return;
