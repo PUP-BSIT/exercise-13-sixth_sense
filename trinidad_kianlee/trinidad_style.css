@@ -258,7 +258,6 @@ p {
   margin-top: -2rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
   padding: 2rem;
 }
 
@@ -269,7 +268,6 @@ p {
 .comment-group {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 textarea {
@@ -292,7 +290,6 @@ textarea {
 .comment-container {
   display: flex;
   justify-content: center;
-  margin-top: 1rem;
 }
 
 .comment-container button {
@@ -302,37 +299,49 @@ textarea {
   cursor: pointer;
 }
 
-.team-comment {
+.sort-buttons {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.sort-buttons select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: #01b0d3;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sort-buttons select:hover {
+  background-color: #0194b0;
+}
+
+.comments-section {
   text-align: center;
 }
 
-.team-comment > h2 {
-  margin-bottom: 10px;
-}
-
-.teammate-comments {
+.comments-list {
   max-width: 600px;
   margin: 0 auto;
+}
+
+.comment {
   background-color: rgba(255, 255, 255, 0.1);
-  padding: 20px;
   border-radius: 8px;
-}
-
-.team-comment-item {
-  margin-bottom: 10px;
-  background-color: #01b0d3;
-  border-radius: 4px;
   padding: 10px;
-  color: #fff;
+  margin-bottom: 10px;
 }
 
-.team-comment-author {
+.comment-author {
   font-weight: bold;
   margin-bottom: 5px;
 }
 
-.team-comment-text {
-  color: #fff;
+.comment-text {
+  margin: 0;
 }
 
 @media (max-width: 768px) {
@@ -362,8 +371,5 @@ textarea {
   .goal {
     max-width: 100%;
   }
-
-  .teammate-comments {
-    max-width: calc(100% - 40px);
-  }
 }
+
