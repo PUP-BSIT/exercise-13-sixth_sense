@@ -286,13 +286,25 @@ input[type="submit"]:hover {
 }
 
 .comments-of-team h3 {
+  background-color: lightcyan;
+  width: 90%;
+  max-width: 450px;
+  margin: 32px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border-radius: 20px;
+  margin-bottom: 50px;
+  
   margin-top: 0;
 }
 
 #sort_asc, #sort_desc {
   background-color: #6c757d;
   color: #fff;
-  margin-left:
+  margin-left: 20px;
 }
 
 
