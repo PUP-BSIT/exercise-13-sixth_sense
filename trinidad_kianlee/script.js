@@ -40,9 +40,7 @@ function displayComments() {
         <span class="comment-date">${new Date(comment.date).toLocaleString()}
       </span>
       </div>
-      <p class="comment-text">${comment.text}</p></div>`
-    )
-    .join("");
+      <p class="comment-text">${comment.text}</p></div>`).join("");
 }
 
 function sortComments(order) {
