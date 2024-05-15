@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta name="viewport" content="wclassth=device-wclassth, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="./edit.css" rel="stylesheet" />
     <title>Ilagan, Andrei Jireh M.</title>
   </head>
@@ -169,7 +169,8 @@
           id="textarea_for_comment"
           placeholder="Add your comment here">
         </textarea>
-        <button type="button" name="comment" id="comment">Comment</button>
+        <button type="button" name="comment" 
+                id="comment" onclick="addComment()">Comment</button>
         <button id="sort_asc" onclick="sortComments('asc')">
           Sort by Date (Ascending)
         </button>
@@ -183,5 +184,6 @@
       </div>
 
     </div>
+  <script src="script.js"></script>
   </body>
 </html>

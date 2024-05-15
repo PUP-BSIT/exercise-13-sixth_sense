@@ -259,11 +259,6 @@ input[type="submit"]:hover {
   border-radius: 20px;
   margin-bottom: 50px;
   margin-top: 0;
-  /*background-color: rgb(241, 180, 65);
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;*/
 }
 
 .add-comment input,
@@ -292,15 +287,22 @@ input[type="submit"]:hover {
 }
 
 .comments-of-team {
-  background-color: rgb(241, 180, 65);
-  border: 5px solid rgb(247, 246, 246);
+  background-color: lightcyan;
+  width: 90%;
+  max-width: 450px;
+  margin: 32px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  margin-bottom: 50px;
+  margin-top: 0;
 }
 
 .comments-of-team h3 {
-  background-color: lightcyan;
+  background-color: #12c790;;
   width: 90%;
   max-width: 450px;
   margin: 32px auto;

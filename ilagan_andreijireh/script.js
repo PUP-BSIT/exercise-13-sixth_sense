@@ -3,7 +3,7 @@ const inputField = document.getElementById("comment");
 const nameField = document.getElementById("name");
 const submitBtn = document.getElementById("submit_btn");
 
-const isValid = (field) => field.value.trim().length > 0;
+const isValid = (field) => !field.value.trim().length;
 
 const enableSubmit = isValid(inputField) && isValid(nameField);
 submitBtn.disabled = !enableSubmit;
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
   nameInput.addEventListener("input", checkFormValidity);
   commentTextarea.addEventListener("input", checkFormValidity);
   commentButton.addEventListener("click", addComment);
-
+  console.log("test")
   loadComments();
 });
 
@@ -39,18 +39,21 @@ function checkFormValidity() {
 function addComment() {
   const nameInput = document.getElementById("name").value;
   const commentInput = document.getElementById("textarea_for_comment").value;
-  if (nameInput.trim() && commentInput.trim()) {
+  nameInput.trim(); 
+  commentInput.trim(); 
     const comment = {
       name: nameInput,
       text: commentInput,
       date: new Date().toISOString(),
     };
+    console.log(comment)
+
     comments.push(comment);
     saveComments();
     displayComments();
     document.getElementById("name").value = "";
     document.getElementById("textarea_for_comment").value = "";
-  }
+  
 }
 
 function displayComments() {
