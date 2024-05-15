@@ -1,16 +1,16 @@
 let comments = [];
 
 function checkComment() {
-  const userName = document.getElementById("user_name").value;
-  const userComment = document.getElementById("user_comment").value;
-  const commentButton = document.getElementById("comment_button");
+  const userName = document.querySelector("user_name").value;
+  const userComment = document.querySelector("user_comment").value;
+  const commentButton = document.querySelector("comment_button");
 
   commentButton.disabled = !(userName && userComment);
 }
 
 function addComment() {
-  const userName = document.getElementById("user_name").value;
-  const userComment = document.getElementById("user_comment").value;
+  const userName = document.querySelector("user_name").value;
+  const userComment = document.querySelector("user_comment").value;
   const timestamp = new Date().toISOString();
 
   const comment = {
@@ -25,13 +25,13 @@ function addComment() {
 }
 
 function clearForm() {
-  document.getElementById("user_name").value = "";
-  document.getElementById("user_comment").value = "";
-  document.getElementById("comment_button").disabled = true;
+  document.querySelector("user_name").value = "";
+  document.querySelector("user_comment").value = "";
+  document.querySelector("comment_button").disabled = true;
 }
 
 function displayComments() {
-  const commentsList = document.getElementById("comments_list");
+  const commentsList = document.querySelector("comments_list");
   commentsList.innerHTML = comments
     .map(
       (comment) => `<div class="comment-item">
@@ -53,6 +53,6 @@ function sortComments(order) {
 }
 
 function handleSortChange() {
-  const sortOrder = document.getElementById("sort_dropdown").value;
+  const sortOrder = document.querySelector("sort_dropdown").value;
   sortComments(sortOrder);
 }
