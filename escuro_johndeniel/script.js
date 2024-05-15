@@ -15,7 +15,6 @@ function validateInput() {
 function addComment() {
   let nameField = document.querySelector("#name");
   let commentField = document.querySelector("#comment");
-  let commentList = document.querySelector("#comment_list");
 
   let comment = {
     name: nameField.value.trim(),
