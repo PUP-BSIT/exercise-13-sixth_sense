@@ -46,22 +46,22 @@
       <h2>Gallery</h2>
       <div class="image-container">
         <div class="image-box">
-          <img src="./images/4.jpg" alt="A whale" />
+          <img src="./images/4.jpg" alt="A whale"/>
         </div>
         <div class="image-box">
-          <img src="./images/5.jpg" alt="A mountain" />
+          <img src="./images/5.jpg" alt="A mountain"/>
         </div>
         <div class="image-box">
-          <img src="./images/sky.jpg" alt="A galaxy" />
+          <img src="./images/sky.jpg" alt="A galaxy"/>
         </div>
         <div class="image-box">
-          <img src="./images/8.jpg" alt="A forest" />
+          <img src="./images/8.jpg" alt="A forest"/>
         </div>
         <div class="image-box">
-          <img src="./images/9.jpg" alt="A lonely street" />
+          <img src="./images/9.jpg" alt="A lonely street"/>
         </div>
         <div class="image-box">
-          <img src="./images/10.jpg" alt="A tree" />
+          <img src="./images/10.jpg" alt="A tree"/>
         </div>
       </div>
     </div>
@@ -85,37 +85,31 @@
           <div class="forms">
             <div>
               <label for="email">Email</label>
-              <input type="email" name="email" required />
+              <input type="email" name="email" required/>
             </div>
-
             <div>
               <label for="fullname">Fullname</label>
-              <input type="text" name="fullname" required />
+              <input type="text" name="fullname" required/>
             </div>
-
             <div>
               <label for="age">Age</label>
-              <input type="number" name="age" required />
+              <input type="number" name="age" required/>
             </div>
-
             <div>
               <label for="subject">Subject</label>
-              <input type="text" name="subject" required />
+              <input type="text" name="subject" required/>
             </div>
           </div>
-
           <div class="message-container">
             <label for="message">Message</label>
             <textarea name="message" cols="30" rows="10" required></textarea>
           </div>
-
           <div class="checkbox-container">
-            <input type="checkbox" name="sendme" />
+            <input type="checkbox" name="sendme"/>
             <label for="sendme">Send me a copy</label>
           </div>
-
           <div class="submit-container">
-            <input type="submit" value="Submit" />
+            <input type="submit" value="Submit"/>
           </div>
         </form>
       </div>
@@ -148,48 +142,28 @@
       </div>
     </section>
 
-    <div class="team-comment">
-      <h2>Comments</h2>
-      <div class="teammate-comments">
-        <div class="team-comment-item">
-          <span class="team-comment-author">Alliyah Samantha</span>
-          <p class="team-comment-text">
-            i know that soon your hard work and determination will pay off.
-          </p>
-        </div>
-        <div class="team-comment-item">
-          <span class="team-comment-author">John</span>
-          <p class="team-comment-text">Love you man</p>
-        </div>
-        <div class="team-comment-item">
-          <span class="team-comment-author">Marc</span>
-          <p class="team-comment-text">You can do it!</p>
-        </div>
-        <div class="team-comment-item">
-          <span class="team-comment-author">Andrei</span>
-          <p class="team-comment-text">Cheeres to your fuure endeavors!</p>
-        </div>
-        <div class="team-comment-item">
-          <span class="team-comment-author">Angelica</span>
-          <p class="team-comment-text">
-            I have no doubt you'll achieve your goals.
-          </p>
-        </div>
+    <div class="comments-section">
+      <h2>All Comments</h2>
+      <div class="sort-buttons">
+        <select id="sort_dropdown" onchange="handleSortChange()">
+          <option value="desc">Newest</option>
+          <option value="asc">Oldest</option>
+        </select>
       </div>
+      <div id="comments_list"></div>
     </div>
 
     <div class="comment-section">
       <h2>Add a comment</h2>
       <div class="comment-container">
-        <form class="comments">
+        <form class="comments" disabled>
           <div class="comment-group">
             <label>Name</label>
             <input
               type="text"
               id="user_name"
               required
-              oninput="checkComment()"
-            />
+              oninput="checkComment()"/>
           </div>
           <div class="comment-group">
             <label>Comment</label>
@@ -197,11 +171,14 @@
               id="user_comment"
               name="comment"
               required
-              oninput="checkComment()"
-            ></textarea>
+              oninput="checkComment()"></textarea>
           </div>
           <div class="comment-container">
-            <button type="submit" id="comment_button" disabled>Comment</button>
+            <button
+              type="submit"
+              id="comment_button"
+              disabled
+              onclick="addComment()">Comment</button>
           </div>
         </form>
       </div>
