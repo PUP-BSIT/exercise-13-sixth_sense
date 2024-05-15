@@ -136,19 +136,36 @@
     </div>
 
     <div class="section">
-      <div class="comment-section">
-       <h2>Comments</h2>
-        <form id="comment-Form">
-           <textarea id="comment-Text" placeholder="Write your comment here..." required></textarea>
-           <button type="submit">Add Comment</button>
-        </form>
-        <div class="sort_buttons">
-           <button id="sort-Asc">Sort by Date (Asc)</button>
-           <button id="sort-Desc">Sort by Date (Desc)</button>
+      <h2>Comments</h2>
+      <div class="comments-container">
+        <div class="form-container">
+          <h3>Add Comment</h3>
+          <form id="comment_form" class="form">
+            <div class="form-group">
+              <label for="name_input">Name:</label>
+              <input type="text" id="name_input" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="comment_input">Comment:</label>
+              <textarea id="comment_input" name="comment" required></textarea>
+            </div>
+            <div class="form-group">
+              <button type="submit" id="submit_btn">Submit Comment</button>
+            </div>
+            <div class="comments-list">
+              <div class="sort-options">
+                <label for="sort_order">Arrange By:</label>
+                <select id="sort_order">
+                  <option value="asc">Oldest</option>
+                  <option value="desc">Newest</option>
+                </select>
+              </div>
+              <div id="comment-list"></div>
+            </div>
+          </form>
         </div>
-        <ul id="comments-List"></ul>
       </div>
-    </div> 
+    </div>
 
     <script src="script.js"></script>
   </body>
