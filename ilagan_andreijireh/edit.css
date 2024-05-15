@@ -247,11 +247,23 @@ input[type="submit"]:hover {
 }
 
 .add-comment {
-  background-color: rgb(241, 180, 65);
+  background-color: lightcyan;
+  width: 90%;
+  max-width: 450px;
+  margin: 32px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border-radius: 20px;
+  margin-bottom: 50px;
+  margin-top: 0;
+  /*background-color: rgb(241, 180, 65);
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
+  margin-bottom: 20px;*/
 }
 
 .add-comment input,
