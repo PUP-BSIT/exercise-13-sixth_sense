@@ -290,7 +290,6 @@ textarea {
 .comment-container {
   display: flex;
   justify-content: center;
-
 }
 
 .comment-container button {
@@ -372,7 +371,5 @@ textarea {
   .goal {
     max-width: 100%;
   }
-
-  
 }
 
