@@ -3,7 +3,6 @@ function validate_input() {
   const comment_field = document.querySelector("#comment_input");
   const submit_btn = document.querySelector("#submit_btn");
 
- 
   if (
     input_field.value.trim().length === 0 ||
     comment_field.value.trim().length === 0
@@ -44,7 +43,6 @@ document.querySelector("#comment_form").addEventListener("submit", (e) => {
   e.preventDefault();
   const name_input = document.querySelector("#name_input");
   const comment_input = document.querySelector("#comment_input");
-
 
   if (!name_input.value.trim() || !comment_input.value.trim()) {
     return;
