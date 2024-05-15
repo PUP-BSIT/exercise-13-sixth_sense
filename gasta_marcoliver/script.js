@@ -3,7 +3,7 @@ function validate_input() {
   const comment_field = document.querySelector("#comment_input");
   const submit_btn = document.querySelector("#submit_btn");
 
-  // Guard clause to disable submit button if input fields are empty
+ 
   if (
     input_field.value.trim().length === 0 ||
     comment_field.value.trim().length === 0
@@ -45,7 +45,7 @@ document.querySelector("#comment_form").addEventListener("submit", (e) => {
   const name_input = document.querySelector("#name_input");
   const comment_input = document.querySelector("#comment_input");
 
-  // Guard clause to prevent submission if input fields are empty
+
   if (!name_input.value.trim() || !comment_input.value.trim()) {
     return;
   }
