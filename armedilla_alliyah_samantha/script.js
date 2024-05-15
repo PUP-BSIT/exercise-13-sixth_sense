@@ -1,61 +1,69 @@
-function validateInput() {
-  let nameInput = document.getElementById("name");
-  let commentInput = document.getElementById("comment");
-  let submitBtn = document.getElementById("submit_button");
+function validate_input() {
+  const input_field = document.querySelector("#name_input");
+  const comment_field = document.querySelector("#comment_input");
+  const submit_btn = document.querySelector("#submit_btn");
 
   if (
-    nameInput.value.trim().length > 0 &&
-    commentInput.value.trim().length > 0
+    input_field.value.trim().length === 0 ||
+    comment_field.value.trim().length === 0
   ) {
-    submitBtn.disabled = false;
-  } else {
-    submitBtn.disabled = true;
+    submit_btn.disabled = true;
+    submit_btn.classList.add("disabled");
+    return;
   }
+
+  submit_btn.disabled = false;
+  submit_btn.classList.remove("disabled");
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  const commentForm = document.getElementById("commentForm");
-  const commentText = document.getElementById("commentText");
-  const commentsList = document.getElementById("commentsList");
-  const sortAsc = document.getElementById("sortAsc");
-  const sortDesc = document.getElementById("sortDesc");
+let comments = [];
 
-  let comments = [];
+function render_comments(sort_order = "asc") {
+  const comment_list = document.querySelector("#comment-list");
+  comment_list.innerHTML = "";
 
-  commentForm.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const text = commentText.value.trim();
-    if (text !== "") {
-      const comment = {
-        text: text,
-        date: new Date(),
-      };
-      comments.push(comment);
-      commentText.value = "";
-      displayComments();
-    }
+  const sorted_comments = comments.slice().sort((a, b) => {
+    const date_a = new Date(a.date);
+    const date_b = new Date(b.date);
+    return sort_order === "asc" ? date_a - date_b : date_b - date_a;
   });
 
-  sortAsc.addEventListener("click", () => {
-    comments.sort((a, b) => new Date(a.date) - new Date(b.date));
-    displayComments();
+  sorted_comments.forEach((comment) => {
+    const comment_element = document.createElement("div");
+    comment_element.classList.add("comment");
+    comment_element.innerHTML = `
+      <h4>${comment.name}</h4>
+      <p>${comment.text}</p>
+      <small>${comment.date.toLocaleString()}</small>`;
+    comment_list.appendChild(comment_element);
   });
+}
 
-  sortDesc.addEventListener("click", () => {
-    comments.sort((a, b) => new Date(b.date) - new Date(a.date));
-    displayComments();
-  });
+document.querySelector("#comment_form").addEventListener("submit", (e) => {
+  e.preventDefault();
+  const name_input = document.querySelector("#name_input");
+  const comment_input = document.querySelector("#comment_input");
 
-  function displayComments() {
-    commentsList.innerHTML = "";
-    comments.forEach((comment) => {
-      const li = document.createElement("li");
-      li.classList.add("comment");
-      li.innerHTML = `
-              <p>${comment.text}</p>
-              <span class="comment-date">${comment.date.toLocaleString()}</span>
-          `;
-      commentsList.appendChild(li);
-    });
+  if (!name_input.value.trim() || !comment_input.value.trim()) {
+    return;
   }
+
+  const new_comment = {
+    name: name_input.value,
+    text: comment_input.value,
+    date: new Date(),
+  };
+
+  comments.push(new_comment);
+
+  name_input.value = "";
+  comment_input.value = "";
+
+  render_comments(document.querySelector("#sort_order").value);
 });
+
+document.querySelector("#sort_order").addEventListener("change", () => {
+  render_comments(document.querySelector("#sort_order").value);
+});
+
+render_comments();

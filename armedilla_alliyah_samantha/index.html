@@ -4,13 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Armedilla, Alliyah Samantha</title>
-    <link href="mystyle.css" rel="stylesheet" />
+    <link href="./mystyle.css" rel="stylesheet" />
   </head>
   <body>
     <header class="header">
       <h1>Alliyah Samantha D. Armedilla</h1>
     </header>
-
     <div class="container">
       <div class="segment">
         <h2>My interest and hobbies</h2>
@@ -33,7 +32,6 @@
             <li><a href="#">Work 5</a></li>
           </ol>
         </div>
-
         <div class="segment">
           <h2>My Goals</h2>
           <ul>
@@ -44,7 +42,6 @@
           </ul>
         </div>
       </div>
-
       <div class="segment">
         <h2>Testimonials</h2>
         <p>I like the shades -Trinidad</p>
@@ -58,8 +55,8 @@
         <h2>My thoughts about F2F class</h2>
         <p>
           For me, i rather choose F2F than online class because F2F classes
-          allow for a more interactive learning experience. You can directly ask
-          questions to the instructor and classmates, participate in
+          allow for a more interactive learning experience. You can directly 
+          ask questions to the instructor and classmates, participate in
           discussions, and get immediate feedback. This can lead to a deeper
           understanding of the lesson.
         </p>
@@ -67,43 +64,34 @@
     </div>
 
     <div class="segment">
-      <div class="comment-section">
-        <h2>Comments</h2>
-        <form id="commentForm">
-          <textarea
-            id="commentText"
-            placeholder="Write your comment here..."
-            required
-          ></textarea>
-          <button type="submit">Add Comment</button>
-        </form>
-        <div class="sort-buttons">
-          <button id="sortAsc">Sort by Date (Asc)</button>
-          <button id="sortDesc">Sort by Date (Desc)</button>
+      <h2>Comments</h2>
+      <div class="comments-container">
+        <div class="comments-list">
+          <div class="sort-options">
+            <label for="sort_order">Arrange By:</label>
+            <select id="sort_order">
+              <option value="asc">Oldest</option>
+              <option value="desc">Newest</option>
+            </select>
+          </div>
+          <div id="comment-list"></div>
         </div>
-        <ul id="commentsList"></ul>
-      </div>
-    </div>
-
-    <div class="segment">
-      <h2>Comment</h2>
-      <div class="form-container">
-        <form class="form">
-          <div class="form-group">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required />
-          </div>
-          <div class="form-group">
-            <label for="comment">Comment:</label>
-            <textarea id="comment" name="comment" oninput="validateInput()">
-            </textarea>
-          </div>
-          <div class="form-group">
-            <button type="submit" id="submit_button" disabled>
-              Submit Comment
-            </button>
-          </div>
-        </form>
+        <div class="form-container">
+          <h3>Add Comment</h3>
+          <form id="comment_form" class="form">
+            <div class="form-group">
+              <label for="name_input">Name:</label>
+              <input type="text" id="name_input" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="comment_input">Comment:</label>
+              <textarea id="comment_input" name="comment" required> </textarea>
+            </div>
+            <div class="form-group">
+              <button type="submit" id="submit_btn">Submit Comment</button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
 
@@ -111,22 +99,22 @@
       <h2>My Gallery</h2>
       <div class="image-container">
         <div class="sam">
-          <img src="./pictures/picture(1).jpg" alt="Duck" />
+          <img src="./image/picture(1).jpg" alt="Duck" />
         </div>
         <div class="sam">
-          <img src="./pictures/picture(2).jpg" alt="Frog" />
+          <img src="./image/picture(2).jpg" alt="Frog" />
         </div>
         <div class="sam">
-          <img src="pictures/picture(3).jpg" alt="Frog" />
+          <img src="./image/picture(3).jpg" alt="Frog" />
         </div>
         <div class="sam">
-          <img src="./pictures/picture(4).jpg" alt="Frog" />
+          <img src="./image/picture(4).jpg" alt="Frog" />
         </div>
         <div class="sam">
-          <img src="./pictures/picture(5).jpg" alt="Frog" />
+          <img src="./image/picture(5).jpg" alt="Frog" />
         </div>
         <div class="sam">
-          <img src="./pictures/picture(6).jpg" alt="Turtle" />
+          <img src="./image/picture(6).jpg" alt="Turtle" />
         </div>
       </div>
     </div>
@@ -173,6 +161,6 @@
         </form>
       </div>
     </div>
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>
