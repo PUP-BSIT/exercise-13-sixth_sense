@@ -55,3 +55,4 @@ function sortComments(ascending) {
 
   renderComments();
 }
+
