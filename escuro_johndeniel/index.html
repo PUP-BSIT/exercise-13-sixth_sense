@@ -114,7 +114,8 @@
             <input
               type="text"
               name="subject"
-              placeholder="Enter your Subject"/>
+              placeholder="Enter your Subject"
+            />
           </div>
         </div>
 
@@ -125,7 +126,8 @@
               name="message"
               rows="7"
               cols="30"
-              placeholder="Enter your Message"></textarea>
+              placeholder="Enter your Message"
+            ></textarea>
           </div>
         </div>
 
@@ -151,7 +153,8 @@
             name="name"
             required
             placeholder="Enter your Name"
-            oninput="validateInput()"/>
+            oninput="validateInput()"
+          />
         </div>
         <div>
           <label for="comment">Comment</label>
@@ -161,9 +164,16 @@
             required
             placeholder="Enter your Comment"
             required
-            oninput="validateInput()"></textarea>
+            oninput="validateInput()"
+          ></textarea>
         </div>
-        <button type="submit" id="submit-btn" class="submit-btn" disabled>
+        <button
+          type="button"
+          id="submit-btn"
+          class="submit-btn"
+          disabled
+          onclick="addComment()"
+        >
           Comment
         </button>
       </form>
@@ -171,17 +181,16 @@
 
     <div>
       <h2 class="comment-text">Comments</h2>
+      <div class="sort-buttons">
+        <button id="sort-asc" onclick="sortComments(true)">
+          Sort Ascending
+        </button>
+        <button id="sort-desc" onclick="sortComments(false)">
+          Sort Descending
+        </button>
+      </div>
       <div class="comment">
-        <ol>
-          <li>- Gasta: Will always support you!</li>
-          <li>
-            - Trinidad: Hoping from the stars above that someday you will
-            achieve all of it, Bro
-          </li>
-          <li>- Rosario: Do what you can. Keep going!</li>
-          <li>- Armedilla: I believe in you, keep it up!</li>
-          <li>- Ilagan: May the moon shine upon you always!</li>
-        </ol>
+        <ol id="comment-list"></ol>
       </div>
     </div>
   </body>
