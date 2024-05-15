@@ -259,7 +259,8 @@ input[type="submit"]:hover {
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
-  border: 1px solid #ccc;
+  border: 5px solid rgb(247, 246, 246);
+  padding: 20px;
   border-radius: 4px;
   box-sizing: border-box;
 }
@@ -297,7 +298,6 @@ input[type="submit"]:hover {
   padding: 20px;
   border-radius: 20px;
   margin-bottom: 50px;
-  
   margin-top: 0;
 }
 
