@@ -1,17 +1,20 @@
 function validate_input() {
-  let input_field = document.getElementById("name_input");
-  let comment_field = document.getElementById("comment_input");
-  let submit_btn = document.getElementById("submit_btn");
+  const input_field = document.getElementById("name_input");
+  const comment_field = document.getElementById("comment_input");
+  const submit_btn = document.getElementById("submit_btn");
+
+  // Guard clause to disable submit button if input fields are empty
   if (
-    input_field.value.trim().length > 0 &&
-    comment_field.value.trim().length > 0
+    input_field.value.trim().length === 0 ||
+    comment_field.value.trim().length === 0
   ) {
-    submit_btn.disabled = false;
-    submit_btn.classList.remove("disabled");
-  } else {
     submit_btn.disabled = true;
     submit_btn.classList.add("disabled");
+    return;
   }
+
+  submit_btn.disabled = false;
+  submit_btn.classList.remove("disabled");
 }
 
 let comments = [];
@@ -42,6 +45,11 @@ document.getElementById("comment_form").addEventListener("submit", (e) => {
   e.preventDefault();
   const name_input = document.getElementById("name_input");
   const comment_input = document.getElementById("comment_input");
+
+  // Guard clause to prevent submission if input fields are empty
+  if (!name_input.value.trim() || !comment_input.value.trim()) {
+    return;
+  }
 
   const new_comment = {
     name: name_input.value,
