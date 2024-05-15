@@ -258,8 +258,8 @@ p {
   margin-top: -2rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
   padding: 2rem;
+  text-align: center;
 }
 
 .comment-section > h2 {
@@ -269,7 +269,6 @@ p {
 .comment-group {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 textarea {
@@ -292,7 +291,6 @@ textarea {
 .comment-container {
   display: flex;
   justify-content: center;
-  margin-top: 1rem;
 }
 
 .comment-container button {
@@ -300,6 +298,27 @@ textarea {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+}
+
+.comments-list {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.comment {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.comment-author {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.comment-text {
+  margin: 0;
 }
 
 .sort-buttons {
