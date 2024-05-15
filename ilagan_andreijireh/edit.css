@@ -293,6 +293,7 @@ input[type="submit"]:hover {
 
 .comments-of-team {
   background-color: rgb(241, 180, 65);
+  border: 5px solid rgb(247, 246, 246);
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
