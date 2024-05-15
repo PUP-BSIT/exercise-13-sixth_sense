@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="style.css" rel="stylesheet" />
-    <script src="script.js"></script>
     <title>Escuro_JohnDeniel Page</title>
   </head>
   <body>
@@ -83,8 +82,8 @@
       <div class="classes-list">
         <ol>
           <li>
-            It's a much better way to learn because the teacher is always there
-            to help you.
+            It's a much better way to learn because the teacher is always
+            there to help you.
           </li>
           <li>Also the class is much more interactive and engaging.</li>
         </ol>
@@ -99,11 +98,11 @@
         <div class="upper">
           <div>
             <label for="email">Email</label>
-            <input type="email" name="email" placeholder="Enter your Email" />
+            <input type="email" name="email" placeholder="Enter your Email"/>
           </div>
           <div>
             <label for="fullname">Full Name</label>
-            <input type="text" name="fullname" placeholder="Enter your Name" />
+            <input type="text" name="fullname" placeholder="Enter your Name"/>
           </div>
           <div>
             <label for="age">Age</label>
@@ -143,7 +142,7 @@
     <div class="comment-form">
       <h2>Leave a Comment</h2>
       <form>
-        <div class="">
+        <div>
           <label for="name">Name</label>
           <input
             type="text"
@@ -163,7 +162,11 @@
             required
             oninput="validateInput()"></textarea>
         </div>
-        <button type="submit" id="submit-btn" class="submit-btn" disabled>
+        <button
+          type="button"
+          id="submit_btn"
+          disabled
+          onclick="addComment()">
           Comment
         </button>
       </form>
@@ -171,18 +174,19 @@
 
     <div>
       <h2 class="comment-text">Comments</h2>
+      <div class="sort-buttons">
+        <button id="sort_asc" onclick="sortComments(true)">
+          Sort Ascending
+        </button>
+        <button id="sort_desc" onclick="sortComments(false)">
+          Sort Descending
+        </button>
+      </div>
       <div class="comment">
-        <ol>
-          <li>- Gasta: Will always support you!</li>
-          <li>
-            - Trinidad: Hoping from the stars above that someday you will
-            achieve all of it, Bro
-          </li>
-          <li>- Rosario: Do what you can. Keep going!</li>
-          <li>- Armedilla: I believe in you, keep it up!</li>
-          <li>- Ilagan: May the moon shine upon you always!</li>
-        </ol>
+        <ol id="comment_list"></ol>
       </div>
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
