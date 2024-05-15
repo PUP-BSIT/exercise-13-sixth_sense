@@ -322,8 +322,8 @@ textarea:focus {
   opacity: 0.5;
 }
 
-#sort-asc,
-#sort-desc {
+#sort_asc,
+#sort_desc {
   padding: 8px 16px;
   background-color: #86aab7;
   color: #fff;
