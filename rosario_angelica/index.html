@@ -59,17 +59,6 @@
 
    <div class="container">
      <div class="section">
-       <h2>Comment Section</h2>
-        <p>You can do it! I belived in you! - Gasta</p>
-        <p>May all your dreams came true! - Armedilla</p>
-        <p>Wishing you all the best of luck, Ange - Kian</p>
-        <p>Live long and prosper! - Jai</p>
-		    <p>My Bestfriend lets go!! - Escuro</p>
-     </div>
-   </div>
-
-   <div class="container">
-     <div class="section">
        <h2>My Thoughts about F2F Class</h2>
         <p>I believe face-to-face classes are more real life experience
            because instructors can keep track of each student's progress 
@@ -77,33 +66,6 @@
            and understand the material when I'm in the classroom.
         </p>
      </div>
-   </div>
-
-   <div class="section">
-    <h2>Comment</h2>
-    <div class="form-container">
-      <form class="form">
-        <div class="form-group">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" 
-            required oninput="validateInput()"/>
-        </div>
-        <div class="form-group">
-          <label for="comment">Comment:</label>
-          <textarea
-            id="comment"
-            name="comment"
-            required
-            oninput="validateInput()">
-          </textarea>
-        </div>
-        <div class="form-group">
-          <button type="submit" id="submit_button" disabled>
-            Submit Comment
-          </button>
-        </div>
-      </form>
-    </div>
    </div>
 
     <div class="gallery">
@@ -172,6 +134,39 @@
         </form>
       </div>
     </div>
+
+    <div class="section">
+      <h2>Comments</h2>
+      <div class="comments-container">
+        <div class="form-container">
+          <h3>Add Comment</h3>
+          <form id="comment_form" class="form">
+            <div class="form-group">
+              <label for="name_input">Name:</label>
+              <input type="text" id="name_input" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="comment_input">Comment:</label>
+              <textarea id="comment_input" name="comment" required></textarea>
+            </div>
+            <div class="form-group">
+              <button type="submit" id="submit_btn">Submit Comment</button>
+            </div>
+            <div class="comments-list">
+              <div class="sort-options">
+                <label for="sort_order">Arrange By:</label>
+                <select id="sort_order">
+                  <option value="asc">Oldest</option>
+                  <option value="desc">Newest</option>
+                </select>
+              </div>
+              <div id="comment-list"></div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
     <script src="script.js"></script>
   </body>
 </html>

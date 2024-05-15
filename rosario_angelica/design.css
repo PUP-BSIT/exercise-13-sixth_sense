@@ -17,7 +17,8 @@ body {
   box-shadow: 4px 5px 15px black;
 }
 
-h2 {
+h2, 
+h3 {
   text-align: center;
   font-weight: bold;
   background-color: #ff7e5f;
@@ -173,4 +174,52 @@ textarea:focus {
   .container {
     max-width: 900px;
   }
+}
+
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+.form-group button[type="submit"] {
+  background-color: #ccc;
+  color: #888;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: not-allowed;
+  transition: background-color 0.3s ease, color 0.3s ease, cursor 0.3s ease;
+}
+
+.form-group button[type="submit"] :not(.disabled) {
+  background-color: #ff5e40;
+  color: #fff;
+  cursor: pointer;
 }
