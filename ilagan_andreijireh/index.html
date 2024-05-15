@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta name="viewport" content="wclassth=device-wclassth, initial-scale=1" />
-    <link href="edit.css" rel="stylesheet" />
+    <link href="./edit.css" rel=stylesheet" />
     <title>Ilagan, Andrei Jireh M.</title>
   </head>
 
@@ -129,8 +129,7 @@
             name="name"
             required
             placeholder="Enter your Name"
-            oninput="validateInput()"
-          />
+            oninput="validateInput()"/>
         </div>
 
         <div>
@@ -140,8 +139,7 @@
             name="comment"
             required
             placeholder="Enter your Comment"
-            oninput="validateInput()"
-          ></textarea>
+            oninput="validateInput()"></textarea>
         </div>
         <button type="submit" id="submit_btn" class="submit-btn">
           Comment
@@ -158,6 +156,32 @@
         <p>You can do it! -Trinidad</p>
         <p>Always believe in yourself! - Armedilla</p>
       </div>
+
+      <h3>Add a comment here</h3>
+      <form class="add-comment">
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Enter your name"/>
+        <textarea
+          name="textarea-for-comment"
+          id="textarea_for_comment"
+          placeholder="Add your comment here">
+        </textarea>
+        <button type="button" name="comment" id="comment">Comment</button>
+        <button id="sort_asc" onclick="sortComments('asc')">
+          Sort by Date (Ascending)
+        </button>
+        <button id="sort_desc" onclick="sortComments('desc')">
+          Sort by Date (Descending)
+        </button>
+      </form>
+
+      <div class="comments-of-team">
+        <h3>Comments</h3>
+      </div>
+
     </div>
   </body>
 </html>

@@ -30,6 +30,13 @@ h2 {
   font-family: Georgia, sans-serif;
 }
 
+h3 {
+  padding: 20px;
+  margin-left: 10px;
+  text-align: center;
+  font-family: Georgia, sans-serif;
+}
+
 ul,
 li {
   padding-left: 0;
@@ -238,6 +245,56 @@ input[type="submit"]:hover {
   cursor: pointer;
   margin-bottom: 50px;
 }
+
+.add-comment {
+  background-color: rgb(241, 180, 65);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.add-comment input,
+.add-comment textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.add-comment button {
+  padding: 10px 20px;
+  background-color: #12c790;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 50px;
+}
+
+.add-comment button:hover {
+  background-color: #0056b3;
+}
+
+.comments-of-team {
+  background-color: rgb(241, 180, 65);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.comments-of-team h3 {
+  margin-top: 0;
+}
+
+#sort_asc, #sort_desc {
+  background-color: #6c757d;
+  color: #fff;
+  margin-left:
+}
+
 
 @media (max-width: 426px) {
   .message-container {
