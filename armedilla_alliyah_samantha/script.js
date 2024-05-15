@@ -3,18 +3,13 @@ function validate_input() {
   const comment_field = document.querySelector("#comment_input");
   const submit_btn = document.querySelector("#submit_btn");
 
-  if (
-    input_field.value.trim().length === 0 ||
-    comment_field.value.trim().length === 0
-  ) {
+  if (!input_field.value.trim() || !comment_field.value.trim()) {
     submit_btn.disabled = true;
     submit_btn.classList.add("disabled");
     return;
   }
-
   submit_btn.disabled = false;
   submit_btn.classList.remove("disabled");
-}
 
 let comments = [];
 
@@ -44,10 +39,7 @@ document.querySelector("#comment_form").addEventListener("submit", (e) => {
   const name_input = document.querySelector("#name_input");
   const comment_input = document.querySelector("#comment_input");
 
-  if (!name_input.value.trim() || !comment_input.value.trim()) {
-    return;
-  }
-
+  if (!name_input.value.trim() || !comment_input.value.trim()) return;
   const new_comment = {
     name: name_input.value,
     text: comment_input.value,
