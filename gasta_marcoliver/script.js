@@ -1,7 +1,7 @@
 function validate_input() {
-  const input_field = document.getElementById("name_input");
-  const comment_field = document.getElementById("comment_input");
-  const submit_btn = document.getElementById("submit_btn");
+  const input_field = document.querySelector("#name_input");
+  const comment_field = document.querySelector("#comment_input");
+  const submit_btn = document.querySelector("#submit_btn");
 
   // Guard clause to disable submit button if input fields are empty
   if (
@@ -20,7 +20,7 @@ function validate_input() {
 let comments = [];
 
 function render_comments(sort_order = "asc") {
-  const comment_list = document.getElementById("comment-list");
+  const comment_list = document.querySelector("#comment-list");
   comment_list.innerHTML = "";
 
   const sorted_comments = comments.slice().sort((a, b) => {
@@ -35,16 +35,15 @@ function render_comments(sort_order = "asc") {
     comment_element.innerHTML = `
       <h4>${comment.name}</h4>
       <p>${comment.text}</p>
-      <small>${comment.date.toLocaleString()}</small>
-    `;
+      <small>${comment.date.toLocaleString()}</small>`;
     comment_list.appendChild(comment_element);
   });
 }
 
-document.getElementById("comment_form").addEventListener("submit", (e) => {
+document.querySelector("#comment_form").addEventListener("submit", (e) => {
   e.preventDefault();
-  const name_input = document.getElementById("name_input");
-  const comment_input = document.getElementById("comment_input");
+  const name_input = document.querySelector("#name_input");
+  const comment_input = document.querySelector("#comment_input");
 
   // Guard clause to prevent submission if input fields are empty
   if (!name_input.value.trim() || !comment_input.value.trim()) {
@@ -62,11 +61,11 @@ document.getElementById("comment_form").addEventListener("submit", (e) => {
   name_input.value = "";
   comment_input.value = "";
 
-  render_comments(document.getElementById("sort_order").value);
+  render_comments(document.querySelector("#sort_order").value);
 });
 
-document.getElementById("sort_order").addEventListener("change", () => {
-  render_comments(document.getElementById("sort_order").value);
+document.querySelector("#sort_order").addEventListener("change", () => {
+  render_comments(document.querySelector("#sort_order").value);
 });
 
 render_comments();
